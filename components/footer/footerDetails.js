@@ -32,7 +32,7 @@ const FooterDetails = () => (
             background-color: green;
             color: #fff;
             word-wrap: break-word;
-            padding: 3rem;
+            padding: 3rem 2%;
         }
         .copyright,
         .flex-container {
