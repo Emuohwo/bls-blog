@@ -17,9 +17,9 @@ const FooterDetails = () => (
           <div className="footer-flex-item">
               <h3>We are social</h3>
               <div className="social-media">
-                  <span><a href="http://eloshines.com" target="_blank">Facebook</a></span>
-                  <span><a href="http://eloshines.com" target="_blank">Instagram</a></span>
-                  <span><a href="http://eloshines.com" target="_blank">Whatsapp</a></span>
+                  <span><a href="https://www.facebook.com/FehintolaMrJerry/" target="_blank">Facebook</a></span>
+                  <span><a href="https://www.instagram.com/BetterLifesavings/" target="_blank">Instagram</a></span>
+                  <span><a href="https://chat.whatsapp.com/J6HglRuoLVX8KzGEhAnnPh" target="_blank">Whatsapp</a></span>
               </div>
           </div>
       </div>
@@ -31,13 +31,34 @@ const FooterDetails = () => (
         .footer-area{
             background-color: green;
             color: #fff;
+            word-wrap: break-word;
+            padding: 3rem;
         }
-        .social-media,
         .copyright,
         .flex-container {
             display: flex;
+            flex-wrap: wrap;
+            width: 90%;
             justify-content: space-between;
-            padding: 5%;
+        }
+        .footer-flex-item {
+            width: 30%;
+            align-items: center;
+        }
+        .footer-flex-item:first-child {
+            flex-grow: 1;
+        }
+        @media screen and (max-width: 769px) {
+            .flex-container {
+                display: block;
+                word-wrap: break;
+            }
+            .footer-flex-item {
+                // display: inline-block;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0.6rem 0.8rem;
+            }
         }
       `}</style>
     </div>
