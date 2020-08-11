@@ -8,7 +8,6 @@ import Navbar from '../components/Header/Navbar';
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
-  // const { isSticky, element } = useSticky()
 
   useEffect(() => {
     fire.firestore()
@@ -56,9 +55,6 @@ const Home = () => {
         a {
           cursor: pointer;
         }
-        section {
-          padding: 0.5rem 1rem;
-        }
         h1 {
           text-align: center;
         }
@@ -76,14 +72,8 @@ const Home = () => {
             display: flex;
             flex-wrap: wrap;
             width: 70%;
-            // background: red;
             justify-content: space-around;
             padding: 1.2rem;
-        }
-        @media screen (max-width: 500px) {
-          .mainContent {
-            display: block;
-          }
         }
         .articlebody {
           color: green;
@@ -98,6 +88,26 @@ const Home = () => {
         .articlebody:hover {
           background-color: green;
           color: #fff;
+        }
+        @media screen and (max-width: 600px) {
+          .mainContent {
+            display: block;
+            width: 100%;
+            margin: 0;
+          }
+          .mainContent,
+          header {
+            display: block;
+            width: 90%;
+          }
+          .articlebody {
+            width: 100%;
+            margin: 0.4rem auto;
+            padding: 0.2rem 5%;
+          }
+          .articlebody:nth-child {
+            background-color: grey;
+          }
         }
         `}
       </style>

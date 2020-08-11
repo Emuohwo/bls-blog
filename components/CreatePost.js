@@ -68,8 +68,9 @@ const CreatePost = () => {
                         placeholder="Blog Title"
                         className="form-control title-input"
                         autoFocus
+                        required
                         value={title}
-                        onChange={({target}) => setTitle(target.value)}
+                        onChange={({target}) => setTitle(target.value === '' ? false : target.value)}
                         />
                     </div>
                     <div className="input-container">

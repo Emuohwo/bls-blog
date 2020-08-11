@@ -15,19 +15,25 @@ const Blog = (props) => {
       <Header />
       <div>
         <div className="mainBlog">
-          <h2>{props.title}</h2>
+          <h1>{props.title}</h1>
           {props.date ? <span>{props.date}</span> : null}
           {props.author ? <span>Written by: {props.author}</span>: null }
-          <Markdown>
+          <Markdown
+           className="markdownstyles"
+          >
             {props.content}
           </Markdown>
           <Link href="/">
             <a> &#8592; Back</a>
           </Link>
           <style jsx>{`
+            h1 {
+              font-size: 200%;
+            }
             .mainBlog {
               margin: 50px auto;
               max-width: 50rem;
+              padding: 1rem;
 
             }
             p {
@@ -37,6 +43,7 @@ const Blog = (props) => {
             a {
               color: blue;
             }
+            
           `}</style>
         </div>
 
