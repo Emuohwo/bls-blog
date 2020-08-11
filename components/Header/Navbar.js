@@ -36,12 +36,6 @@ const Navbar = () => (
             border-radius: 50%;
             margin-left: 2%;
         }
-        @media screen and (max-width: 28rem) {
-            .navbar-logo {
-                width: 70px;
-                height: auto;
-            }
-        }
         .navbar--link {
             display: flex;
             list-style: none;
@@ -51,6 +45,20 @@ const Navbar = () => (
             margin: 20px 2px -5px;
             padding: 4px 12px;
             border-bottom: 2px solid #fff; 
+        }
+        @media screen and (max-width: 28rem) {
+            .navbar-logo {
+                width: 70px;
+                height: auto;
+            }
+            .navbar--link li {
+                margin: 2px 1px -5px;
+                padding: 2px;
+                border-bottom: 2px solid #fff; 
+            }
+            .navbar--link {
+                display: inline-block;
+            }
         }
     `}</style>
     </nav>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactMde from "react-mde";
 import * as Showdown from "showdown";
 
-import Footer from '../components/footer/index'
+
 
 import fire from '../config/fire-conf';
 
@@ -53,7 +53,8 @@ const CreatePost = () => {
         }, 5000)
     }
     return (
-        <>
+        <div>
+            
             <div className="FormWrapper">
                 <h2>Add Blog</h2>
             
@@ -150,10 +151,7 @@ const CreatePost = () => {
                     `}
                 </style>
             </div>
-            {/* <>
-              <Footer />
-            </> */}
-        </>
+        </div>
     )
 }
 
